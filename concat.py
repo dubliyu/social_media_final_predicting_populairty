@@ -15,7 +15,7 @@ def get_files(path="./Data/Partition*.json", debug=0):
 	# For every file
 	for path in glob(path):
 		if debug == 1:
-			if i == 3:
+			if i == 2:
 				break
 			else:
 				i += 1
@@ -33,11 +33,6 @@ def get_files(path="./Data/Partition*.json", debug=0):
 				# Close the stream
 				f.close()
 
-	if debug == 1:
-		print("Length: ", len(raw))
-		print("type: ", type(raw))
-
 	# Return
 	return raw
-def get_sample(raw):
-	row = raw.sample(1)
+
