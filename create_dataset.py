@@ -17,13 +17,9 @@ def convert_to_dataframe(window_size, raw, save_to_file=True, get_from_file=True
 			frame = pd.DataFrame(data=[])
 		print("Reading frame of length: " , len(frame))
 		print("Reading frame with # columns: ", len(frame.columns))
-		if len(frame) != len(raw) or len(frame.columns) == (2 + window_size * 8):
-			print("Expecting frame of size: ", len(raw))
-			print("Running script...")
-		else:
-			ids = frame["ids"].values
-			frame.drop(columns="ids")
-			return frame, ids
+		ids = frame["ids"].values
+		frame.drop(columns="ids")
+		return frame, ids
 
 
 	# Declare variables
@@ -96,7 +92,7 @@ def convert_to_dataframe(window_size, raw, save_to_file=True, get_from_file=True
 		# Append to the frame
 		temp_list.append(row)
 
-		print("Completed: ", hashtag)
+		print("Completed ", len(temp_list), " : ", hashtag)
 
 	# Concat the frames together
 	frame = pd.concat(temp_list, ignore_index=True)
@@ -106,6 +102,7 @@ def convert_to_dataframe(window_size, raw, save_to_file=True, get_from_file=True
 
 	# Save this to file, so that this does not need to be run later
 	if save_to_file:
+		print("Saving dataset of length: ", len(frame))
 		copy = frame.copy()
 		copy["ids"] = ids
 		copy.to_csv(path, encoding='utf-8', index=False)

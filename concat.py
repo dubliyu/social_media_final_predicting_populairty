@@ -15,7 +15,7 @@ def get_files(path="./Data/Partition*.json", debug=0):
 	# For every file
 	for path in glob(path):
 		if debug == 1:
-			if i == 2:
+			if i == 6:
 				break
 			else:
 				i += 1

@@ -43,6 +43,10 @@ rs = RobustScaler()
 total_accuracy = 0
 r2 = 0
 score_avg = 0
+rows_kept = 0
+len_train = 0
+predictions = []
+truths = []
 
 # Perform k-folds cross validation
 for train, test in kf.split(dataset	, dataset_ids):
@@ -52,7 +56,8 @@ for train, test in kf.split(dataset	, dataset_ids):
 	training_ids = dataset_ids[train]
 
 	# remove outliers
-	training, training_ids = od.remove_outliers(training, training_ids)
+	count = len(train)
+	training, training_ids, count = od.remove_outliers(training, training_ids)
 
 	# Scale features
 	training = rs.fit_transform(training)
@@ -60,6 +65,7 @@ for train, test in kf.split(dataset	, dataset_ids):
 	# Train the classifier
 	if DEBUG == 1:
 		print("Training on data length: ", len(training))
+		print("ids length: ", len(training_ids))
 		
 	clf.fit(training, training_ids)
 	
@@ -69,8 +75,6 @@ for train, test in kf.split(dataset	, dataset_ids):
 	print("Score of model: ", score)
 
 	# Test over testing
-	predictions = []
-	truths = []
 	for i in range(len(test)):
 		# Get query and label
 		query = dataset.values[test[i], :].reshape(1, -1)
@@ -80,8 +84,8 @@ for train, test in kf.split(dataset	, dataset_ids):
 		query = rs.transform(query)
 
 		# predict query
-		prediction = clf.predict(query)
-		predictions.append(prediction[0])
+		p = clf.predict(query)
+		predictions.append(p[0])
 		truths.append(label)
 
 	# calculate fold accuracy
@@ -89,25 +93,30 @@ for train, test in kf.split(dataset	, dataset_ids):
 	temp_r2 = r2_score(truths, predictions)
 	total_accuracy += fold_accuracy
 	r2 += temp_r2
+	rows_kept += count
+	len_train = len(train)
 
 	if DEBUG == 1:
 		print("Fold accuracy: ", fold_accuracy)
-		#print(truths)
-		#print(prediction)
+		print("Truths: ", len(truths))
+		print("Predictions: ", len(predictions))
 		print("Running total accuracy: ", total_accuracy)
 		print("Fold Accuracy: ", fold_accuracy)
+		print("Running count of rows kept: ", rows_kept)
 
 ## Calculate results
 # Calculate total accuracy
 total_accuracy = total_accuracy / FOLD_SIZE
 r2 = r2 / FOLD_SIZE
 score_avg = score_avg / FOLD_SIZE
+rows_kept = rows_kept / FOLD_SIZE
 print("Accuracy: ", total_accuracy)
 
-#sr.plot_learning_curve(clf, "Learning Curve", dataset, dataset_ids, n_jobs=4)
-#plt.savefig('./Results/' + str(WINDOW_SIZE) + '_learning_curve.png', bbox_inches='tight')
+sr.plot_learning_curve(clf, "Learning Curve", dataset, dataset_ids, n_jobs=4)
+plt.savefig('./Results/' + str(WINDOW_SIZE) + '_learning_curve.png', bbox_inches='tight')
 
 # save results
-sr.save_results(WINDOW_SIZE, total_accuracy, r2, score_avg)
+sr.save_results(WINDOW_SIZE, total_accuracy, r2, score_avg, rows_kept, len_train)
+sr.plot_observed_vs_fitted(truths, predictions, WINDOW_SIZE)
 
-#plt.show()
+plt.show()

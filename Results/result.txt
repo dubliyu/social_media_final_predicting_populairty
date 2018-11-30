@@ -1,1 +1,242 @@
-dataset len = 139
+dataset len = 653
+
+windowsize: 6 
+-------------------------
+Window Size: 6
+Explained Variance Score: 0.32650102249397406
+R2 Score: 0.3079261223409094
+Model Score: 0.719791129917717
+-------------------------
+
+-------------------------
+Window Size: 6
+Explained Variance Score: 0.32129539729803314
+R2 Score: 0.30259064121133494
+Model Score: 0.7141667637902803
+-------------------------
+
+-------------------------
+Window Size: 6
+Explained Variance Score: 0.28976715265976305
+R2 Score: 0.27118050429958335
+Model Score: 0.7156750898228076
+Avg Number of rows kept: 459.8	 Out of: 523
+Model Score: 0.7156750898228076
+-------------------------
+
+No outliers
+
+-------------------------
+Window Size: 6
+Explained Variance Score: 0.30723133609743136
+R2 Score: 0.28884055416911447
+Model Score: 0.4007368562789356
+Avg Number of rows kept: 0.4007368562789356	 Out of: 523
+Model Score: 0.4007368562789356
+-------------------------
+
+-------------------------
+Window Size: 6
+Explained Variance Score: 0.30233799036191006
+R2 Score: 0.28417431474302535
+Model Score: 0.40327543170339764
+Avg Number of rows kept: 0.40327543170339764	 Out of: 523
+Model Score: 0.40327543170339764
+-------------------------
+
+-------------------------
+Window Size: 6
+Explained Variance Score: 0.36903534512627045
+R2 Score: 0.3509479180409129
+Model Score: 0.4046683445433386
+Avg Number of rows kept: 0.4046683445433386	 Out of: 523
+Model Score: 0.4046683445433386
+-------------------------
+
+dataset len 984
+
+window size: 3
+
+-------------------------
+Window Size: 3
+Explained Variance Score: 0.19553215633486465
+R2 Score: 0.154810183064232
+Model Score: 0.2940713605730079
+Avg Number of rows kept: 697.0	 Out of: 788
+Model Score: 0.2940713605730079
+-------------------------
+
+-------------------------
+Window Size: 3
+Explained Variance Score: 0.2196140248407617
+R2 Score: 0.18458208051033145
+Model Score: 0.4658643007793625
+Avg Number of rows kept: 698.6	 Out of: 788
+Model Score: 0.4658643007793625
+-------------------------
+
+-------------------------
+Window Size: 3
+Explained Variance Score: 0.23666207909035405
+R2 Score: 0.20109100744858938
+Model Score: 0.5125720914182849
+Avg Number of rows kept: 699.4	 Out of: 788
+Model Score: 0.5125720914182849
+-------------------------
+
+window size: 1
+
+-------------------------
+Window Size: 1
+Explained Variance Score: 0.16353770195419584
+R2 Score: 0.14127924773911507
+Model Score: 0.3530043339696885
+Avg Number of rows kept: 652.2	 Out of: 788
+Model Score: 0.3530043339696885
+-------------------------
+
+-------------------------
+Window Size: 1
+Explained Variance Score: 0.16794969240163393
+R2 Score: 0.14774816060604143
+Model Score: 0.36539386371378363
+Avg Number of rows kept: 653.2	 Out of: 788
+Model Score: 0.36539386371378363
+-------------------------
+
+-------------------------
+Window Size: 1
+Explained Variance Score: 0.16946178492533592
+R2 Score: 0.1488093095312844
+Model Score: 0.35962518913907504
+Avg Number of rows kept: 654.6	 Out of: 788
+Model Score: 0.35962518913907504
+-------------------------
+
+Other testing
+-------------------------
+Window Size: 6
+Explained Variance Score: 0.29322351176928396
+R2 Score: 0.2798647114681443
+Model Score: 0.33721181261777583
+Avg Number of rows kept: 787.2	 Out of: 788
+Model Score: 0.33721181261777583
+-------------------------
+
+-------------------------
+Window Size: 1
+Explained Variance Score: 0.3823636139231593
+R2 Score: 0.3633588167679237
+Model Score: 0.3747844651633419
+Avg Number of rows kept: 787.2	 Out of: 788
+Model Score: 0.3747844651633419
+-------------------------
+
+-------------------------
+Window Size: 1
+Explained Variance Score: 0.3610568546479901
+R2 Score: 0.344292945540918
+Model Score: 0.38678911854264364
+Avg Number of rows kept: 787.2	 Out of: 788
+Model Score: 0.38678911854264364
+-------------------------
+
+-------------------------
+Window Size: 1
+Explained Variance Score: 0.3180146274357998
+R2 Score: 0.28944089301889475
+Model Score: 0.38117769831094916
+Avg Number of rows kept: 787.2	 Out of: 788
+Model Score: 0.38117769831094916
+-------------------------
+
+-------------------------
+Window Size: 1
+Explained Variance Score: 0.36590027598533875
+R2 Score: 0.34264610788802236
+Model Score: 0.37661560092775004
+Avg Number of rows kept: 787.2	 Out of: 788
+Model Score: 0.37661560092775004
+-------------------------
+
+-------------------------
+Window Size: 1
+Explained Variance Score: 0.35128645403360564
+R2 Score: 0.33159381264217347
+Model Score: 0.3715810348326155
+Avg Number of rows kept: 787.2	 Out of: 788
+Model Score: 0.3715810348326155
+-------------------------
+
+-------------------------
+Window Size: 6
+Explained Variance Score: 0.4312493232704947
+R2 Score: 0.41698382346853535
+Model Score: 0.38031775923496436
+Avg Number of rows kept: 787.2	 Out of: 788
+Model Score: 0.38031775923496436
+-------------------------
+
+-------------------------
+Window Size: 1
+Explained Variance Score: 0.29065001234819166
+R2 Score: 0.27112794853619376
+Model Score: 0.3869207763881728
+Avg Number of rows kept: 787.2	 Out of: 788
+Model Score: 0.3869207763881728
+-------------------------
+
+-------------------------
+Window Size: 1
+Explained Variance Score: 0.3409483341998706
+R2 Score: 0.32562890810254497
+Model Score: 0.369395948851285
+Avg Number of rows kept: 787.2	 Out of: 788
+Model Score: 0.369395948851285
+-------------------------
+
+-------------------------
+Window Size: 1
+Explained Variance Score: 0.38051707337110235
+R2 Score: 0.35406760328186476
+Model Score: 0.3848098032188415
+Avg Number of rows kept: 787.2	 Out of: 788
+Model Score: 0.3848098032188415
+-------------------------
+
+-------------------------
+Window Size: 3
+Explained Variance Score: 0.2674256035603578
+R2 Score: 0.232421683531097
+Model Score: 0.26771641023405574
+Avg Number of rows kept: 787.2	 Out of: 788
+Model Score: 0.26771641023405574
+-------------------------
+
+-------------------------
+Window Size: 6
+Explained Variance Score: 0.05364584255054992
+R2 Score: 0.02543901251360279
+Model Score: 0.12075826064478115
+Avg Number of rows kept: 787.2	 Out of: 788
+Model Score: 0.12075826064478115
+-------------------------
+
+-------------------------
+Window Size: 6
+Explained Variance Score: 0.21224718801975095
+R2 Score: 0.20255546570237987
+Model Score: 0.3369678998978304
+Avg Number of rows kept: 787.2	 Out of: 788
+Model Score: 0.3369678998978304
+-------------------------
+
+-------------------------
+Window Size: 6
+Explained Variance Score: 0.1692840181915446
+R2 Score: 0.1497381902467851
+Model Score: 0.42336888566597464
+Avg Number of rows kept: 707.0	 Out of: 788
+Model Score: 0.42336888566597464
+-------------------------
+

@@ -35,4 +35,4 @@ def remove_outliers(template, template_ids):
             count += 1
 
     print("Rows Kept: ", count, " out of: ", len(template))
-    return refined_data, refined_ids
+    return refined_data, refined_ids, count
